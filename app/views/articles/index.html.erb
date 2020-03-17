@@ -1,20 +1,42 @@
-<h2> All Articles Listing </h2>
-<%= link_to "Create New Article", new_article_path %>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Action</th>
-  </tr>
-  <% @articles.each do |article| %>
-  <tr>
-    <td> <%= article.title %></td>
-    <td> <%= article.description %></td>
-    <td>
-      <%= link_to "View", article_path(article) %> |
-      <%= link_to "Edit", edit_article_path(article) %> |
-      <%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"} %>
-    </td>
-  </tr>
-  <% end %>
-</table>
+<div class="container">
+<div class="row">
+    <div class="col-md-12">
+      <div id="page-title">
+        <h2> All Articles Listing </h2>
+      </div>
+
+      <div id="create-article">
+        <%= link_to "Create New Article", new_article_path %>
+      </div>
+
+      <br />
+
+      <div id="articles" class="row">
+        <% @articles.each do |article| %>
+          <div class="article-container col-md-12">
+            <h3 class="article-title"> <%= article.title %></h3>
+            <small class=article-details>
+              <div class="article-author">
+                <strong>Author:</strong> <%= article.user.username if article.user%>
+              </div>
+              <div class="article-created">
+                <strong>Published:</strong> <%= time_ago_in_words(article.created_at) %> ago,
+              </div>
+              <div class ="article-update">
+                <strong>last updated:</strong> <%=  time_ago_in_words(article.updated_at) %> ago
+              </div>
+            </small>
+
+            <p class="article-description"> <%= truncate(article.description, length: 100) %></p>
+
+            <div id="actions">
+              <%= link_to "View Article", article_path(article), class: "view-article" %>
+              <%= link_to "Edit Article", edit_article_path(article), class: "edit-article" %>
+              <%= link_to "Delete Article", article_path(article), class: "delete-article", method: :delete, data: {confirm: "Are you sure?"} %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+</div>
+</div>

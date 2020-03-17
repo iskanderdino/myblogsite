@@ -1,5 +1,20 @@
+body {
+    margin: 0 auto;
+}
+ul{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+a:hover {
+  text-decoration: none !important;
+  color: #000 !important;
+}
+
+#page-title, #create-article, #logo{
+  text-align: center;
+}
+
 #top{
-  line-height: 5em;
   display: block;
   vertical-align: middle;
   text-align: center;
@@ -7,22 +22,121 @@
 
 #logo {
   font-weight: bold;
-  font-size: 1.8em;
-  float: left;
-}
-
-#nav {
-  float: left;
+  font-size: 3em;
+  text-transform: uppercase;
 }
 
 #navlinks li{
   display: inline-block;
-  padding: 0 10px;
 }
 
-#navlink li:last-child {
-  border-right: 0px none ;
+#navlinks li a{
+  padding: 10px;
+  display: inline-block;
 }
 
+#create-article a{
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-color: #1cbf5b;
+  color: #fff;
+  max-width: 30%;
+  display: inline-block;
+  text-align: center;
+  padding: 5px 15px;
+  border-radius: 8px;
+}
+
+#article-container {
+  padding: 10px 25px;
+}
+
+#actions{
+  display: inline-block;
+}
+
+#actions,
+.article-description,
+.article-details{
+  margin-bottom: 25px;
+}
+
+.article-title {
+
+}
+
+.article-details {
+  display: block;
+}
+
+.article-author,
+.article-created,
+.article-update {
+  display: inline;
+  padding-right: 10px;
+  text-transform: capitalize;
+}
+
+.article-container{
+  border-radius: 10px;
+  border: 1px solid 9b9b9b;
+  background-color: #e2e2e2;
+  margin-bottom: 25px;
+}
+
+.article-description {
+  margin-bottom: 25px;
+  font-size: 1.2em;
+}
+
+.view-article, .edit-article, .delete-article {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.view-article,
+.edit-article,
+.delete-article {
+  text-decoration: none !important;
+  color: #fff;
+}
+
+.view-article {
+  background: #155724;
+}
+
+.edit-article {
+  background: #0c5460;
+}
+
+.delete-article {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+.article-form-container {
+  display: block;
+  text-align: center;
+}
+.article-table {
+  text-align: right;
+  display: inline-block;
+}
+
+.article-table tr {
+  margin-bottom: 10px;
+  display: block;
+}
+.article-table td {
+  min-width: 100px;
+  padding-right: 10px;
+}
+
+.article-table input,
+.article-table textarea {
+  min-width: 320px;
+  display: block;
+}
 @import "bootstrap-sprockets";
 @import "bootstrap";

@@ -1,6 +1,10 @@
-<h2>Show Selected Article:</h2>
+<div class="container">
+  <div class="row">
+    <div class="article-container col-md-12">
+      <h2 class="article-title"><%= @article.title %></h2>
+      <p class="article-description">Description: <%= @article.description %></p>
 
-<p>Title: <%= @article.title %></p>
-<p>Description: <%= @article.description %></p>
-
-<p><%= link_to "Back to Articles", articles_path %></p>
+      <p><%= link_to "Back to Articles", articles_path %></p>
+    </div>
+  </div>
+</div>
