@@ -1,4 +1,28 @@
-a:link {color: blue;}
+#top{
+  line-height: 5em;
+  display: block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#logo {
+  font-weight: bold;
+  font-size: 1.8em;
+  float: left;
+}
+
+#nav {
+  float: left;
+}
+
+#navlinks li{
+  display: inline-block;
+  padding: 0 10px;
+}
+
+#navlink li:last-child {
+  border-right: 0px none ;
+}
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
