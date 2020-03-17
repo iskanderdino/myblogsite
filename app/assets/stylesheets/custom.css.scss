@@ -1,10 +1,11 @@
 body {
     margin: 0 auto;
 }
-ul{
+h3, ul{
   margin: 0 !important;
   padding: 0 !important;
 }
+
 a:hover {
   text-decoration: none !important;
   color: #000 !important;
@@ -62,7 +63,7 @@ a:hover {
 }
 
 .article-title {
-
+  line-height: 2.5em;
 }
 
 .article-details {
@@ -78,6 +79,7 @@ a:hover {
 }
 
 .article-container{
+  padding: 25px auto !important;
   border-radius: 10px;
   border: 1px solid 9b9b9b;
   background-color: #e2e2e2;
@@ -116,6 +118,7 @@ a:hover {
 }
 
 .article-form-container {
+  margin: 25px auto !important;
   display: block;
   text-align: center;
 }
@@ -138,5 +141,29 @@ a:hover {
   min-width: 320px;
   display: block;
 }
+.alert {
+  color: #155724 !important;
+  background-color: #d4edda !important;
+  border-color: #c3e6cb !important;
+}
+
+.error-message-container {
+  border: 1px solid #f5c6cb;
+  background-color: #f8d7da;
+  color: #721c24;
+  margin-top: 25px;
+}
+
+.error-message-container h3 {
+  line-height: 2em;
+  background-color: #721c24;
+  color: #fff;
+  padding: 10px !important;
+}
+
+.error-message-container ul {
+  margin: 25px !important;
+}
+
 @import "bootstrap-sprockets";
 @import "bootstrap";

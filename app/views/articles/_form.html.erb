@@ -1,13 +1,15 @@
 
-        <% if @article.errors.any? %>
-          <h3> Failed creating article! </h3>
-          <ul>
-            <% @article.errors.full_messages.each do |msg| %>
-              <li><%= msg %></li>
-            <% end %>
-            </ul>
-        <% end %>
 
+          <% if @article.errors.any? %>
+          <div class="error-message-container">
+            <h3> Failed creating article! </h3>
+            <ul>
+              <% @article.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
         <div class="article-form-container">
           <%= form_for @article do |f| %>
           <table class="article-table">
