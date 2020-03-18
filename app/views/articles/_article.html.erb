@@ -16,10 +16,12 @@
 
       <p class="article-description"> <%= truncate(article.description, length: 100) %></p>
 
+      <% if article.user %>
       <div id="actions">
         <%= link_to "View Article", article_path(article), class: "view-article" %>
         <%= link_to "Edit Article", edit_article_path(article), class: "edit-article" %>
         <%= link_to "Delete Article", article_path(article), class: "delete-article", method: :delete, data: {confirm: "Are you sure?"} %>
+      <% end %>
       </div>
     </div>
   <% end %>

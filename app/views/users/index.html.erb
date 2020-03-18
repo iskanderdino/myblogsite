@@ -1,0 +1,15 @@
+<div class="container">
+<div class="row">
+    <div class="col-md-12">
+      <div id="page-title">
+        <h2> All Users </h2>
+      </div>
+
+      <% @users.each do |user| %>
+      <div class="users">
+        <div class=""><%= link_to user.username, user_path(user) %></div>
+        <div class="article-count"><%= pluralize(user.articles.count, "article") if user.articles %></div>
+      <% end %>
+    </div>
+</div>
+</div>
