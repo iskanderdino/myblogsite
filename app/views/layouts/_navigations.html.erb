@@ -11,8 +11,9 @@
         <div id="nav">
           <ul id="navlinks">
             <li><%= link_to "Articles", articles_path %> </li>
-            <li><a href=#> Login </a> </li>
+            <li><%= link_to 'Login', login_path %></li>
             <li><%= link_to "Register", signup_path %> </li>
+            <li><%= link_to 'Log out', logout_path, method: :delete %></li>
           </ul>
         </div>
       </div>

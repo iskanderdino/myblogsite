@@ -29,12 +29,6 @@
 <%= f.submit(@user.new_record? ? "Sign-up" : "Save") %>
 </p>
 
-<div id="actions">
-  <%= link_to "View Article", article_path(@user), class: "view-article" %>
-  <%= link_to "Edit Article", edit_article_path(@user), class: "edit-article" %>
-  <%= link_to "Delete Article", article_path(@user), class: "delete-article", method: :delete, data: {confirm: "Are you sure?"} %>
-</div>
-
 <% end %>
 
 <p><%= link_to "Back to Articles", articles_path %></p>
