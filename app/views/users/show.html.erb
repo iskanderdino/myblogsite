@@ -1,15 +1,15 @@
 <div class="container">
-<div class="row">
-    <div class="col-md-12">
-      <div id="page-title">
-        <h2> All Articles Listing </h2>
-      </div>
+  <div class="row">
+      <div class="col-md-12">
+        <div id="page-title">
+          <h2> All Articles Listing </h2>
+        </div>
 
-      <div id="create-article">
-        <%= link_to "Create New Article", new_article_path %>
+        <div id="create-article">
+          <%= link_to "Create New Article", new_article_path %>
+        </div>
+        <br />
+        <%= render 'articles/article', obj: @user.articles %>
       </div>
-      <br />
-      <%= render 'articles/article', obj: @user.articles %>
-    </div>
-</div>
+  </div>
 </div>
