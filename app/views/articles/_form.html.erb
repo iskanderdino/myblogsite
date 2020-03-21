@@ -13,17 +13,17 @@
 <table class="article-table">
   <tr>
     <td><%= f.label :title %></td>
-    <td><%= f.text_field :title %></td>
+    <td><%= f.text_field :title, id: "title" %></td>
   </tr>
   <tr>
     <td><%= f.label :description %></td>
-    <td><%= f.text_area :description %></td>
+    <td><%= f.text_area :description, id: "description" %></td>
   </tr>
   </table>
 <p>
-<%= f.submit "Save" %>
+<%= f.submit "Save", id: "save"%>
 </p>
 <% end %>
 
-<p><%= link_to "Back to My Articles", user_path(current_user) %></p>
+<p><%= link_to "Back to My Articles", user_path(current_user), id: "back" %></p>
 </div>

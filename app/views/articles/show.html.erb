@@ -4,7 +4,7 @@
       <h2 class="article-title"><%= @article.title %></h2>
       <p class="article-description">Description: <%= @article.description %></p>
 
-      <p><%= link_to "Back to My Articles", user_path(current_user) %></p>
+      <p><%= link_to "Back to My Articles", user_path(current_user), id: "back" %></p>
     </div>
   </div>
 </div>

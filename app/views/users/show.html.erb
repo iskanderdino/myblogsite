@@ -6,7 +6,7 @@
         </div>
 
         <div id="create-article">
-          <%= link_to "Create New Article", new_article_path %>
+          <%= link_to "Create New Article", new_article_path, id: "create-article" %>
         </div>
         <br />
         <%= render 'articles/article', obj: @user.articles %>

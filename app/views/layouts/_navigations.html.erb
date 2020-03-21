@@ -10,14 +10,14 @@
       <div  class="col-md-12">
         <div id="nav">
           <ul id="navlinks">
-            <li><%= link_to "All Articles", articles_path %> </li>
+            <li><%= link_to "All Articles", articles_path, id: "all-articles"%> </li>
 
             <% if logged_in? %>
-            <li><%= link_to "My Articles", user_path(current_user) %> </li>
-            <li><%= link_to 'Log out', logout_path, method: :delete %></li>
+            <li><%= link_to "My Articles", user_path(current_user), id: "my-articles" %> </li>
+            <li><%= link_to 'Log out', logout_path, method: :delete, id: "logout" %></li>
             <% else %>
-            <li><%= link_to 'Login', login_path %></li>
-            <li><%= link_to "Register", signup_path %> </li>
+            <li><%= link_to 'Login', login_path, id: "login" %></li>
+            <li><%= link_to "Register", signup_path, id: "register" %> </li>
             <% end %>
           </ul>
         </div>

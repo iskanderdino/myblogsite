@@ -4,7 +4,7 @@
       <h3 class="article-title"> <%= article.title %></h3>
       <small class=article-details>
         <div class="article-author">
-          <strong>Author:</strong> <%= article.user.username if article.user%>
+          <strong>Author:</strong> <%=  article.user.username if article.user%>
         </div>
         <div class="article-created">
           <strong>Published:</strong> <%= time_ago_in_words(article.created_at) %> ago,

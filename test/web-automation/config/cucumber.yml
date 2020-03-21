@@ -1,0 +1,8 @@
+
+default: -r features
+ready: --tags @ready
+smoke: --tags @dev_smoketest
+not_ready: --tags @not_ready
+
+#To use this yml file, need to run [cucumber -p <above defined variable>]
+#Can also send multiple defined variables like [cucumber -p <any above defined variable> -p <any other above defined variable>]

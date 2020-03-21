@@ -14,15 +14,15 @@
 <table class="article-table">
   <tr>
     <td><%= f.label :username, "Name" %></td>
-    <td><%= f.text_field :username %></td>
+    <td><%= f.text_field :username, id: "username" %></td>
   </tr>
   <tr>
     <td><%= f.label :email %></td>
-    <td><%= f.text_field :email %></td>
+    <td><%= f.text_field :email, id: "email" %></td>
   </tr>
   <tr>
     <td><%= f.label :password %></td>
-    <td><%= f.password_field :password %></td>
+    <td><%= f.password_field :password, id: "password" %></td>
   </tr>
   </table>
 <p>
@@ -31,5 +31,5 @@
 
 <% end %>
 
-<p><%= link_to "Back to Articles", articles_path %></p>
+<p><%= link_to "Back to Articles", articles_path, id: "back" %></p>
 </div>
