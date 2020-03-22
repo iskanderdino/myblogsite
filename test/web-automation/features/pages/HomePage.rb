@@ -1,6 +1,5 @@
 class HomePage
   include PageObject
-
   page_url "#{$portal_url}"
 
   #initialize pageobjects
@@ -14,23 +13,13 @@ class HomePage
     page_url.should == url
   end
 
-  def signup_account
-    str=Time.now.to_s
-    str.gsub!(/\+.*/,"")
-    str.gsub!(/[-: ]/,"")
-    username = "test_#{str}@yopmail.com"
-
-    self.fname = "test"
-    self.lname = "test"
-    self.cname = "biztest"
-    self.emailuser = username
-    self.password = "Testing123"
-    self.createAccount
-  end
-
   def click_link(link)
     if link == "register"
       self.lnk_register
+    elsif link == "login"
+      self.lnk_login
+    else
+      self.lnk_all_articles
     end
   end
 
