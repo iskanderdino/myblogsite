@@ -5,5 +5,5 @@ Before do
 end
 
 After do
-  @browser.close
+  @browser.quit
 end

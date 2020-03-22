@@ -2,7 +2,10 @@ class RegisterPage
   include PageObject
   page_url "#{$portal_url}/register"
 
-  #initialize pageobjects
+  existing_user = ""
+  existing_email = ""
+
+  #initialize page objects
   link(:lnksignup, :xpath => "//*[@id='LoginBusiness']/a[2]")
   text_field(:username, :id => "username")
   text_field(:email, :id => "email")
@@ -42,11 +45,12 @@ class RegisterPage
   end
 
   def register_user_with_credentials(user, mail)
+
     if user == "<empty>"
       self.username = ""
     elsif user == "<username>"
-      puts "username: #{username}"
-      self.username = generate_user
+      self.username = existing_user = generate_user
+      puts "user: #{existing_user}"
     else
       self.username = user
     end
@@ -54,14 +58,13 @@ class RegisterPage
     if mail == "<empty>"
       self.email = ""
     elsif mail == "<email>"
-      puts "email: #{email}"
-      self.email = generate_email
+      self.email = existing_email = generate_email
+      puts "email: #{existing_email}"
+      puts "existing_email: #{existing_email}"
     else
       self.email = mail
     end
-
     self.password = "testing123"
-
     self.save
   end
 
