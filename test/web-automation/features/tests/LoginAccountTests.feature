@@ -1,5 +1,6 @@
 @ready
-Feature: Signup Accounts Tests
+Feature: Login Accounts Tests
+
 Background:
 Given I am on My Blogspot HomePage
 
